@@ -19,12 +19,15 @@ if (organization.status > 199 && organization.status < 300) { //handles errors e
       console.log(org.login, org.avatar_url); //logs out data...we referenced login and org.avatar_url to specifically call these properties
 
       let orgLi = document.createElement('li'); //creates an 'li' out in space in JS
+
       let orgImg = document.createElement('img'); //create an 'img' out in space in JS
       orgImg.setAttribute('src', org.avatar_url); //didn't put org.avatar_url in '' because it was already a string
+      //
+      let orgHeader = document.createElement('h2');
+      orgHeader.innerText = org.login;
 
-      orgLi.innerText = org.login; //puts the login value in the li's inner text
       orgLi.appendChild(orgImg); //appends the orgImg into the orgLi
-
+      orgLi.appendChild(orgHeader);
       document.querySelector('#organizations ul').appendChild(orgLi); //put Li into the first ul in #organizations
     });
   });
