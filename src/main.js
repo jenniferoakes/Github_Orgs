@@ -33,7 +33,10 @@ if (organization.status > 199 && organization.status < 300) { //handles errors e
   });
 
 } else { //there was a problem....tell the user
-  console.log( "There was a problem. Please wait.", organization.status ); //prints this out if something goes wrong ie.404
+  let errorMessage = document.querySelector('.error');
+  let errorCode = organization.status;
+  errorMessage[0].innerText = 'Error ' + errorCode ;
+  // console.log( "There was a problem. Please wait.", organization.status ); //prints this out if something goes wrong ie.404
 }
 
 });
