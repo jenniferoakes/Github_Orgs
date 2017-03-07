@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i");
+main ul li {
+  list-style: none;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  margin: 1em; }
+
+li {
+  display: flex;
+  background-color: #F0F0F0; }
+
+img {
+  height: 100px;
+  width: 100px; }
+
+h2 {
+  color: #AAAAAA;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  padding-left: 0.5em; }
+
+/*# sourceMappingURL=style.css.map */
