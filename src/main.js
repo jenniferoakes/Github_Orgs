@@ -11,7 +11,7 @@ let promise = fetch( //running fetch function (only can have 2 arguments, second
 
 promise.then(function getOrganizations(response) { //promise function to gather data from fetch. the first .then of a function is RESPONSE
   // console.log(response);
-  
+
   if (response.status > 199 && response.status < 300) { //handles errors effectively. prints out problem string if something goes wrong
     //if we get the correct status code...
     response.json().then( function printOrgData(orgData) { //json instead of text bc github gives back data in json format //argument is always data
@@ -33,9 +33,9 @@ promise.then(function getOrganizations(response) { //promise function to gather 
     });
 
   } else { //there was a problem....tell the user
-    let errorMessage = document.querySelector('.error');
-    let errorCode = organization.status;
-    errorMessage[0].innerText = 'Error ' + errorCode ;
+    let errorMessage = document.querySelector('.error'); //select something with a clas....use a '.'; selecting class to a variable
+    let errorCode = response.status;
+    errorMessage.innerText = 'Error ' + errorCode ;
     // console.log( "There was a problem. Please wait.", organization.status ); //prints this out if something goes wrong ie.404
   }
 
